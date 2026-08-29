@@ -198,6 +198,38 @@ Use any skill with `/skill-name` in Claude Code terminal or via code.
 
 ---
 
+## 🧠 AI Engineering Core Skills (Top 10 in 90% of Job Descriptions)
+
+These are **industry-standard technical skills** that appear in 9 out of 10 AI engineering jobs:
+
+| Skill | Prevalence | Your Use |
+|-------|-----------|----------|
+| **RAG / Retrieval Augmented Generation** | 89% | Hemraj forecasting, LeadVault enrichment, DIGIX knowledge |
+| **LangChain** | 82% | Agent chain orchestration (Hemraj, LeadVault, DIGIX) |
+| **FastAPI** | 76% | Backend for all projects (RxGPT, Hemraj, DIGIX) |
+| **Vector Databases** | 71% | Embeddings storage (Pinecone, Weaviate, Milvus) |
+| **Prompt Engineering** | 64% | Agent instruction optimization |
+| **Docker** | 61% | Deployment for all services |
+| **AWS/GCP Deployment** | 58% | Cloud infrastructure (Hemraj GCP) |
+| **LangGraph / Multi-agent Systems** | 49% | Hemraj 13 agents, DIGIX multi-component |
+| **LoRA / QLoRA Fine-tuning** | 37% | Custom model optimization (optional) |
+| **Langfuse / Observability** | 28% | Agent monitoring & debugging |
+
+### How to Skill-Up
+
+1. **RAG** → `/data:explore-data`, Langflow, vector DB tutorials
+2. **LangChain** → awesome-llm-apps repo patterns
+3. **FastAPI** → `/engineering:documentation`, FastAPI tutorials
+4. **Vector DB** → Pinecone/Weaviate free tiers (from free-for-dev)
+5. **Prompt Eng** → `/brand-voice:generate-guidelines`, experimentation
+6. **Docker** → Each tool's Dockerfile (Ollama, Penpot, AppFlowy)
+7. **AWS/GCP** → Cloud SDK, Hemraj Finance GCP deployment
+8. **LangGraph** → Langflow visual builder, context-mode routing
+9. **LoRA** → Optional (ollama supports it natively)
+10. **Langfuse** → Open-source observability platform
+
+---
+
 ## 🔌 SEO & Content Strategy
 
 | Skill | Command | Purpose | Your Projects |

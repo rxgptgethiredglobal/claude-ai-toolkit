@@ -1,6 +1,6 @@
 # External Tools Directory 🛠️
 
-**16 curated open-source projects** for integrating with Claude, your agents, and projects.
+**20 curated open-source projects** for integrating with Claude, your agents, and projects.
 
 ---
 
@@ -208,6 +208,93 @@ Categories:
 - News, Video, Science, Business, Calendar
 - Geocoding, Cryptocurrency, and 40+ more
 ```
+
+---
+
+## 🔗 LLM Framework & Plugin System
+
+### 16. **DeepSeek Harness** ⭐ CRITICAL FOR AGENTS
+**"Everything is a Plugin"** — Universal LLM framework
+
+- **Use**: Add LLM to any codebase instantly
+- **GitHub**: [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
+- **201K stars, 23.1K forks**
+
+---
+
+## 🛠 Agent & Workflow Builders
+
+### 17. **Langflow** ⭐ FOR VISUAL AGENT DESIGN
+**Build AI agents & RAG workflows visually** — Drag-and-drop, deploy as APIs/MCP
+
+- **What**: Visual builder for agents and flows
+- **Use**: Hemraj agents, DIGIX SDR, LeadVault pipelines (no code)
+- **Deploy**: Web UI, API generation, MCP servers
+- **GitHub**: [langflow-ai/langflow](https://github.com/langflow-ai/langflow)
+- **153K stars**
+
+```bash
+docker run -it -p 7860:7860 langflowai/langflow
+# Build complex flows visually, export as Python/FastAPI
+```
+
+---
+
+### 18. **OpenHands** ⭐ AUTONOMOUS CODING AGENT
+**Self-hosted coding agent** — Write code, run tests, debug, autonomous development
+
+- **What**: Autonomous agent that can code (like Claude but self-hosted)
+- **Use**: Hemraj agent code generation, testing, debugging
+- **Deploy**: Docker, local or cloud
+- **GitHub**: [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
+- **84K stars**
+
+```bash
+# Run agent to complete dev tasks
+openagents execute "Add tests for pricing agent"
+```
+
+---
+
+## 🔍 Data & Web Integration
+
+### 19. **Scraping** ⭐ WEB SCRAPING FRAMEWORK
+**Adaptive web scraping** — Anti-bot bypass, Cloudflare handling, proxy rotation
+
+- **What**: Enterprise web scraping (handles modern sites)
+- **Use**: LeadVault data harvesting, market research, competitor monitoring
+- **Features**: Learns from site changes, auto-relocates selectors
+- **GitHub**: [D4Vinci/Scraping](https://github.com/D4Vinci/Scraping)
+- **73.6K stars**
+
+```bash
+pip install scraping-ai
+scraping-ai --url https://example.com --extract "pricing, features"
+```
+
+---
+
+### 20. **Free-for-dev** ⭐ DEVELOPER TOOLS DIRECTORY
+**132K collection of developer tools with free/permanent tiers**
+
+- **What**: Massive directory of free dev services (hosting, databases, APIs, etc.)
+- **Use**: Find free alternatives for all projects (Hemraj, LeadVault, etc.)
+- **Categories**: Hosting, DBs, APIs, monitoring, design, analytics
+- **GitHub**: [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev)
+- **132K stars**
+
+---
+
+## 🎨 Design Automation
+
+### 21. **Open Design** ⭐ OPEN-SOURCE CLAUDE DESIGN
+**Claude Design alternative** — AI-powered design workflows open-source
+
+- **What**: Design system automation (turn Claude Design into a workflow)
+- **Use**: DIGIX frontend design, Penpot integration
+- **Deploy**: Self-hosted design agent
+- **GitHub**: [nexu-io/open-design](https://github.com/nexu-io/open-design)
+- **85K stars**
 
 ---
 
@@ -424,7 +511,7 @@ Each tool has its own setup guide in `/tools/{category}/`:
 
 ---
 
-**Last Updated**: 2026-08-28  
-**Total Tools**: 16  
-**Combined Stars**: 1M+  
+**Last Updated**: 2026-08-29  
+**Total Tools**: 20  
+**Combined Stars**: 1.5M+  
 **Total Cost to Deploy**: $0 (all open-source)
