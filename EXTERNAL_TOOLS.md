@@ -463,6 +463,54 @@ docker-compose up plausible
 
 ---
 
+## ⚙️ Harness Engineering (Model + Harness = Agent)
+
+**The Equation**: `Model + Harness = Coding Agent`
+
+The **model** is one term (Claude, GPT-4, Llama). The **harness** is everything else:
+
+### Harness Components
+- **Loop** — Feedback iteration (plan → act → evaluate → improve)
+- **Tools** — Functions the agent can call (APIs, databases, GitHub, etc.)
+- **Gate** — Safety guardrails (input validation, policy checks, output screening)
+- **Context** — Persistent state (project files, memory, history)
+- **Checkpoints** (ckpt) — Save/restore agent state mid-task
+- **Sub-agents** — Delegate to specialized workers (retrieval agent, code agent, etc.)
+
+### Why It Matters
+- Model alone = not an agent (it's just prediction)
+- Harness = makes it autonomous, reliable, safe
+- Your projects: Hemraj harness orchestrates 13 agents; each agent has its harness
+
+---
+
+## 🎯 Agent Governance & Evals 2.0 (Microsoft Foundry Pattern)
+
+### Retrieval as a Subagent (Self-Healing)
+1. **Plan** — Understand what info is needed
+2. **Query Sources** — Search docs, wiki, blob storage
+3. **Evaluate Good?** — If yes → grounded answer; if no → marked "I don't know"
+4. **Iterate** — Retry if sources exhausted
+5. **Output** — Answer with citations or structured "I don't know"
+
+**Your use**: LeadVault knowledge base, Hemraj market data retrieval
+
+### Eval & Optimizer Loop (Production-Grade Testing)
+1. **Run Rubrics** — Evaluate agent response against 5+ dimensions
+2. **Pass All?** — If YES → ship agent; if NO → optimize
+3. **Agent Optimizer** — Generate & test candidate fixes:
+   - Rewrite prompt
+   - Adjust tool use
+   - Swap model
+   - Re-rank sources
+   - Tune skills
+4. **Score Candidates** — Pick best performing fix
+5. **Promote Best** — Move to production
+
+**Your use**: Test Hemraj pricing agent before live deployment; validate DIGIX SDR scoring
+
+---
+
 ## 🎯 AI Engineer's Stack (8 Core Areas)
 
 ### 1. LLMs (Foundation)
@@ -504,6 +552,50 @@ docker-compose up plausible
 - Prompt optimization, in-context learning, few-shot patterns
 - **Purpose**: Maximize LLM performance
 - **Critical for**: All agent instruction design
+
+---
+
+## 🚀 Complete AI Agent Development Stack (All Layers)
+
+### Layer 1: Foundations
+- **Python** — Backend language for agents (FastAPI, Django)
+- **JavaScript** — Frontend + Node.js backend
+- **Git** — Version control for agent code
+
+### Layer 2: LLMs (Core Models)
+- **OpenAI GPT** — Industry standard
+- **Claude** (Anthropic) — Strong reasoning
+- **Gemini** (Google) — Multimodal
+- **Llama** (Meta) — Open-source
+
+### Layer 3: AI Frameworks (Orchestration)
+- **LangChain** — Chain LLM calls, memory, agents
+- **LangGraph** — State machines for multi-step workflows
+- **LlamaIndex** — Document indexing + retrieval
+
+### Layer 4: Agent Skills (Capabilities)
+- **Prompt Engineering** — Optimize instructions
+- **Tool Calling** — Call external functions
+- **Function Calling** — Structured outputs
+- **RAG** — Retrieve external knowledge
+- **Memory** — Persistent state (short/long-term)
+- **Multi-Agent Systems** — Coordinate multiple agents
+
+### Layer 5: Databases (State Storage)
+- **Vector DB** (Pinecone, Qdrant, Chroma) — Embeddings storage
+- **ChromaDB** — Lightweight embeddings
+- **FAISS** — Facebook vector search
+- **PostgreSQL** — Relational data
+
+### Layer 6: APIs (Connectivity)
+- **REST API** — Stateless HTTP endpoints
+- **GraphQL** — Query language for APIs
+- **MCP** (Model Context Protocol) — Standard tool layer
+
+### Layer 7: Deployment & Infrastructure
+- **Docker** — Containerization
+- **FastAPI** — Fast Python API framework
+- **Vercel** — Edge deployment
 
 ---
 

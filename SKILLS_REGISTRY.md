@@ -198,6 +198,21 @@ Use any skill with `/skill-name` in Claude Code terminal or via code.
 
 ---
 
+## 🎯 Advanced AI Concepts (Top 9 Modern Patterns + 2026 Trends)
+
+### 2026 AI Agent Trends (6 Dominating Categories)
+
+| Trend | Core Idea | Your Use | Tools |
+|-------|-----------|----------|-------|
+| **1. Multi-Agent Orchestration** | Coordinated teams of specialist agents replace single-agent workflows | Hemraj 13 agents, DIGIX SDR console | LangGraph, AutoGen, AWS Bedrock, Relevance AI |
+| **2. Context Engineering** | Reliable agents depend on richer structured context, not just smarter prompts | Long-running workflows in all projects | mem0, LlamaIndex, Pinecone, Zep |
+| **3. Guardian Agents** | Agents now need supervisor agents watching safety, hallucinations, policy, tools, drift | Compliance for RxGPT, DIGIX, Hemraj | Lakera, Salesforce AITM, Patronus AI, Arthur |
+| **4. Agentic Commerce** | Agents move from recommendations to full transactions (purchase, approval, payment) | LeadVault → transactional lead capture | Amazon RxAs, Stripe Agent Toolkit, Walmart Sparky, Perplexity Shop |
+| **5. Coding Agents at Scale** | Managers orchestrate codebases, issues, PRs, deployment, CI/CD flows (not just autocomplete) | Hemraj agent code generation, testing | Claude Code, GitHub Copilot SDK, Cursor, Devin, Woodsuf |
+| **6. Agent Governance & Evals 2.0** | Separates agent experiments from scaled production—governance, testing, safe automation | Test before deploy for all projects | LangSmith, Braintrust, Weights & Biases, promptfoo |
+
+---
+
 ## 🎯 Advanced AI Concepts (Top 9 Modern Patterns)
 
 The **9 core AI engineering concepts** that define modern AI systems:
@@ -213,6 +228,75 @@ The **9 core AI engineering concepts** that define modern AI systems:
 | **7. Guardrails** | Protection layer for trustworthy AI | Input validation → Processing → Output screening |
 | **8. Observability** | "Visibility enables reliability" | Agent pipelines → Traces, Logs, Dashboards |
 | **9. The Bitter Lesson** | Scale outperforms handcrafted rules | Handwritten rules → Fragile; Adaptive compute → Long-term |
+
+---
+
+## 🏗️ AI Agent Architecture Levels (Capability Progression)
+
+### Level 1: LLM Only
+- **Standalone** Large Language Model (Claude, GPT-4, Gemini)
+- **Use**: Q&A, summarization, simple text generation
+- **Your projects**: Starting point for all agents
+
+### Level 2: Agent with Tools
+- LLM + Tool access (Calculator, CodeInterpreter, WebSearch, RAG Tool, etc.)
+- **Advance by**: Gaining access to specific tools
+- **Your projects**: Hemraj agents can call pricing APIs, market data APIs
+
+### Level 3: Agent with Memory + Reasoning
+- **Components**:
+  - Short-term memory (conversation context)
+  - Long-term memory (persistent storage)
+  - Reflection (self-critique)
+  - Self-critics
+  - Chain of thoughts (step-by-step reasoning)
+  - Prompt decompose (break complex tasks into steps)
+- **Use**: Production agents, complex workflows, reasoning chains
+- **Your projects**: Hemraj 13 agents, DIGIX SDR, RxGPT patient workflows
+
+### Level 4: Multi-Agent Systems
+- **Involves**: Multiple agents (each Level 3+) that speak to each other
+- **Coordination**: Supervisor agent + specialist agents
+- **Use**: Enterprise knowledge workflows, legal ops automation
+- **Your projects**: Hemraj orchestrator → 13 specialist agents
+
+---
+
+## 🔄 RAG Mindmap (12 Components That Make Retrieval Work)
+
+| Component | What It Does | Your Use |
+|-----------|-------------|----------|
+| **1. Vector Embeddings** | Turns text into number lists; close vectors = close meaning (e.g. king = queen) | LeadVault prospect profiles |
+| **2. Vector Database** | Stores & indexes those vectors; returns nearest ones fast (Pinecone, FAISS, Qdrant) | All RAG systems |
+| **3. Semantic Search** | Finds by meaning, not keywords; handles synonyms & rewording | LeadVault intelligent search |
+| **4. Chunking** | Breaks docs into small pieces (~300 tokens); balances recall vs noise | LeadVault document indexing |
+| **5. Re-ranking** | Re-scores top results; pushes best matches to top (cross-encoder) | Hemraj market data filtering |
+| **6. Hybrid Search** | Blends keyword + vector search; catches exact & fuzzy hits | LeadVault multi-mode search |
+| **7. Metadata Filter** | Filters by tags before search; shrinks candidate set | Hemraj time-based filtering |
+| **8. Context Window** | Text model reads at once; overflow gets truncated (~128K tokens) | Agent context limits |
+| **9. Hallucination Guard** | Verifies claims before output; prefers "I don't know" | RxGPT patient safety |
+| **10. Grounding** | Answers cite real sources; every claim is traceable | Hemraj pricing justification |
+| **11. Data Drift** | Sources change over time; old index = stale answers (prices, docs, policies) | LeadVault freshness |
+| **12. Knowledge Graph** | Links entities & relationships; adds structure to context | Hemraj supply chain modeling |
+
+---
+
+## 📚 12 AI Terms (Core Vocabulary)
+
+| Term | What It Means | Your Use |
+|------|---------------|----------|
+| **1. LLM** | Predict next token—sequence of words modeled as probability distribution | Foundation for all agents |
+| **2. Hallucination** | Confident + correct ≠ always true | Guard with Lakera/Patronus |
+| **3. Token** | Text becomes chunks (words, subwords, punctuation) | Manage context windows |
+| **4. Train vs Infer** | Learn (training) / Apply (inference) | Don't retrain; use inference |
+| **5. Fine-Tuning** | Adapt model to your domain (optional, expensive) | Skip for now; use prompting |
+| **6. RLHF** | Human feedback steers model toward preferred outputs | Safety guardrails |
+| **7. Distillation** | Teacher (large) → student (small); compress knowledge | Edge deployment for RxGPT |
+| **8. RAG** | Retrieve external docs → feed to LLM → answer | LeadVault, all knowledge systems |
+| **9. Chain of Thought** | Reason in steps (not one jump) | Prompt design for agents |
+| **10. Weights** | Model's learned parameters (~billions) | Don't touch; it's the brain |
+| **11. Validation Loss** | Generalization signal; low loss ≠ always good | Monitor in evals |
+| **12. Coding Agent** | Plan • Act • Test—autonomous development loop | Hemraj code generation |
 
 ---
 
