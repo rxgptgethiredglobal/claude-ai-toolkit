@@ -300,6 +300,36 @@ The **9 core AI engineering concepts** that define modern AI systems:
 
 ---
 
+## 🔄 Three Eras of Getting LLMs to Do Real Work
+
+### Era 1: Prompt Engineering
+**You control**: The words (system prompt + user message)
+- **Context window**: Only what fits in one window
+- **Constraints**: Anything that doesn't fit is cut
+- **One window in, one answer out** — the only lever is how you ask
+- **Best for**: Simple Q&A, summarization, quick tasks
+- **Your use**: Hemraj pricing instructions, LeadVault prompt tuning
+
+### Era 2: Context Engineering
+**You control**: What goes in (docs, tools, memory, rules, history)
+- **Everything you could send**: docs, tools, memory, rules, history
+- **Curated context**: The window is a budget—you choose what earns a place
+- **The result becomes history**: Each response feeds back into next call
+- **Best for**: Production workflows, agents with memory, complex reasoning
+- **Your use**: Hemraj multi-agent orchestration, DIGIX SDR context layers, RxGPT patient memory
+
+### Era 3: Harness Engineering
+**You control**: The loop (not just the prompt)
+- **Context window**: System prompt + docs + tools + history + long-term memory
+- **Done?**: Agent checks if task is complete; if no → tool call → retry
+- **Loops until done**: Tools & environment expand what's possible
+- **Best for**: Autonomous agents, production systems, complex multi-step workflows
+- **Your use**: Hemraj 13 agents running continuously, DIGIX autonomous SDR, coding agents
+
+**Summary**: Prompt ≤ Context ≤ Harness (each era subsumes the last)
+
+---
+
 ## 🧠 AI Engineering Core Skills (Top 10 in 90% of Job Descriptions)
 
 These are **industry-standard technical skills** that appear in 9 out of 10 AI engineering jobs:
@@ -329,6 +359,56 @@ These are **industry-standard technical skills** that appear in 9 out of 10 AI e
 8. **LangGraph** → Langflow visual builder, context-mode routing
 9. **LoRA** → Optional (ollama supports it natively)
 10. **Langfuse** → Open-source observability platform
+
+---
+
+## ⚡ Claude Code Execution Models (Scale from Skill to Dynamic Workflow)
+
+**They can all run the task. The difference is how far they scale.**
+
+### 1. SKILL
+**Single-session inline execution**
+- **Scope**: Instructions Claude follows in one context window
+- **How**: `.claude/skills/<name>/SKILL.md` defines the instructions
+- **Scaling**: ✅ One session, one context
+- **Use**: `/code-review`, `/simplify`, `/debug` — inline, one-shot tasks
+- **Your projects**: Quick Hemraj code reviews, DIGIX prompt fixes
+
+### 2. SUBAGENT
+**Isolated worker with handoff**
+- **Scope**: Delegates to an isolated worker that reports back a summary
+- **How**: Main Claude (you) → Subagent (isolated) → reports summary back
+- **Scaling**: ✅ One session, multiple subtasks
+- **Architecture**:
+  ```
+  Main Claude ────task────> Subagent
+       ↑                        ↓
+       └────summary return─────
+  ```
+- **Use**: `.claude/agents/<name>.md` — research agents, code generation
+- **Your projects**: LeadVault data enrichment subagent, Hemraj forecasting subagent
+
+### 3. AGENT TEAM
+**Peer sessions sharing a task list**
+- **Scope**: Multiple Claude sessions share a task list and message each other
+- **How**: Peer sessions (all are leaders) coordinate via shared task list
+- **Scaling**: ✅ Multiple sessions, distributed work
+- **Architecture**:
+  ```
+  Lead ↔ Peer ↔ Peer
+     (shared task list)
+  ```
+- **Usage**: `export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
+- **Use**: Hemraj 13-agent orchestration, DIGIX multi-component systems
+- **Your projects**: Complex workflows requiring coordination
+
+### 4. DYNAMIC WORKFLOW
+**JS runtime fans the work to many agents**
+- **Scope**: A JavaScript runtime dynamically spawns agents for work
+- **How**: `<script>` runtime → spawns agents on demand
+- **Scaling**: ✅✅ Unlimited parallelization
+- **Use**: `/workflows` — complex pipelines, batch processing
+- **Your projects**: LeadVault batch lead classification, Hemraj portfolio analysis
 
 ---
 

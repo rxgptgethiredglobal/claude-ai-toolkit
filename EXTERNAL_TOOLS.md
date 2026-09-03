@@ -555,6 +555,109 @@ The **model** is one term (Claude, GPT-4, Llama). The **harness** is everything 
 
 ---
 
+## 📊 Vector RAG vs Vectorless RAG (Structure-Based Retrieval)
+
+### Traditional RAG (Vector-Based)
+**Finds**: What's **similar**
+- **Architecture**: Document → Chunking → Embeddings (vectors) → Vector DB
+- **Search**: Similarity search retrieves relevant chunks
+- **Workflow**:
+  1. Document is chunked into small pieces
+  2. Each chunk converted into embeddings (vectors)
+  3. Similarity search retrieves relevant chunks
+  4. Retrieved chunks + query → sent to LLM
+  5. LLM generates answer (may hallucinate if context isn't exact)
+- **Limitation**: Returns chunks that are **similar**, not necessarily the ones that **contain the exact answer**
+- **Your use**: LeadVault broad prospect search, Hemraj market trend retrieval
+
+### Vectorless RAG (Structure-Based)
+**Finds**: What's **relevant** (understands structure)
+- **Architecture**: Document → Structure extraction → Reasoning tree → Navigator
+- **Search**: Structural understanding retrieves relevant chunks (100% correct selection)
+- **Workflow**:
+  1. Document is chunked into small pieces
+  2. Each chunk converted into embeddings (vectors) — same as traditional
+  3. **Structural understanding** retrieves relevant chunks (human expert method)
+  4. LLM navigates the structure, not indexes
+  5. Exact selection → sent to LLM
+  6. LLM generates answer (no hallucination if context is exact)
+- **Advantage**: Navigates the document **the way a human expert does**—by understanding structure and intent, **not by guessing similarity**
+- **Benefits**:
+  - ✅ Zero vectors needed
+  - ✅ Zero chunking artifacts
+  - ✅ No embedding model at all
+  - ✅ Long documents become an asset (structure is rich)
+  - ✅ Hybrid still wins for breadth; vectorless for precision
+
+### Benchmark Results
+- **Traditional Vector RAG**: ~50% accuracy on financial data (SEC filings, earnings calls)
+- **Vectorless RAG (VactlyAI/PageIndex)**: ~80%+ accuracy on same data
+- **Why**: Structured documents (legal, financial, filings) need structural understanding, not semantic similarity
+
+### When to Use Which
+- **Vector RAG**: Loose documents, blog posts, unstructured text, breadth needed
+- **Vectorless RAG**: Long-form structured documents (legal, compliance, financial, manuals)
+- **Hybrid**: Both signals—vectors for breadth, structure for precision
+
+**Your use**: 
+- RxGPT: Vectorless RAG for HIPAA compliance docs, regulatory filings
+- Hemraj Finance: Vectorless RAG for compliance documents, contracts
+- LeadVault: Vector RAG for prospect context, company research
+
+---
+
+## 🔌 Types of APIs & Their Use Cases
+
+### Open APIs
+**Public-facing**: Weather data, login systems, product fetch
+- **Use cases**: Data integration, third-party logins, public data access
+- **Your projects**: LeadVault public data enrichment, Hemraj market APIs
+
+### SOAP APIs
+**Legacy enterprise**: Facebook feed, GitHub stats, custom queries
+- **Use cases**: Complex business operations, historical systems
+- **Less common now**: Replaced by REST/GraphQL
+
+### GraphQL APIs
+**Query language**: Custom queries, GitHub stats, fine-grained data
+- **Advantage**: Ask for exactly what you need (no over-fetching)
+- **Your projects**: DIGIX intelligence queries, Hemraj analytics
+
+### REST APIs
+**Industry standard**: Weather, login, product fetch, CRUD operations
+- **Stateless HTTP**: GET, POST, PUT, DELETE
+- **Your projects**: All projects use REST APIs (Stripe, Slack, GitHub)
+
+### Backend-to-Backend APIs
+**Internal B2B**: Internal service communication, microservices
+- **Use**: Hemraj agent-to-agent communication, DIGIX service mesh
+
+### Internal APIs
+**Employee only**: Permissions, approvals, configuration
+- **Use**: RxGPT internal compliance APIs, Hemraj admin endpoints
+
+### Service-to-Database APIs
+**Direct access**: ORMs, Query engines, direct data access
+- **Use**: All projects use this (PostgreSQL, BigQuery, etc.)
+
+### B2B Integration APIs
+**Partner data**: Walmart, Amazon, Shopify integrations
+- **Use**: LeadVault prospect data from B2B networks, Hemraj supplier APIs
+
+### Partner APIs
+**Co-marketing**: Affiliate links, partner integrations
+- **Use**: Hemraj supply chain partners, LeadVault lead exchanges
+
+### Affiliate Integration APIs
+**Commission tracking**: Track sales, attribution, payouts
+- **Use**: LeadVault affiliate commission tracking
+
+### Data Sharing APIs
+**Bulk data**: Logistics tracking, financial data, shared datasets
+- **Use**: Hemraj supply chain data sharing, RxGPT patient record sharing
+
+---
+
 ## 🚀 Complete AI Agent Development Stack (All Layers)
 
 ### Layer 1: Foundations
