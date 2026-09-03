@@ -198,6 +198,24 @@ Use any skill with `/skill-name` in Claude Code terminal or via code.
 
 ---
 
+## 🎯 Advanced AI Concepts (Top 9 Modern Patterns)
+
+The **9 core AI engineering concepts** that define modern AI systems:
+
+| Concept | What It Does | Your Use |
+|---------|-------------|----------|
+| **1. Agentic Loops** | Think → Execute → Monitor → Improve | Hemraj agents (13 agents orchestration) |
+| **2. MCP (Model Context Protocol)** | One standard layer for every tool | Wire Claude to Gmail, GitHub, Slack, databases |
+| **3. Subagents & Multi-Agent Systems** | Distributed reasoning / Separated contexts | DIGIX multi-component, Hemraj orchestration |
+| **4. AI Gateway** | Single access layer for multiple models | Route between Claude, GPT, Open-source LLMs |
+| **5. Inference Economics** | Token caching = Reduced cost | Optimize Hemraj agent costs, streaming |
+| **6. Evals** | "If you don't evaluate it, you can't deploy it" | Test inputs → Model responses → Pass/Fail |
+| **7. Guardrails** | Protection layer for trustworthy AI | Input validation → Processing → Output screening |
+| **8. Observability** | "Visibility enables reliability" | Agent pipelines → Traces, Logs, Dashboards |
+| **9. The Bitter Lesson** | Scale outperforms handcrafted rules | Handwritten rules → Fragile; Adaptive compute → Long-term |
+
+---
+
 ## 🧠 AI Engineering Core Skills (Top 10 in 90% of Job Descriptions)
 
 These are **industry-standard technical skills** that appear in 9 out of 10 AI engineering jobs:

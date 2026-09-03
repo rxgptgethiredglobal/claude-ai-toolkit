@@ -379,6 +379,134 @@ docker-compose up plausible
 
 ---
 
+## 🌐 Modern AI Ecosystem (Complete Stack)
+
+### LLMs & Foundation Models
+- **Claude** (Anthropic) — 200K context, multimodal, strong reasoning
+- **GPT-4o** (OpenAI) — Vision, fast, production-ready
+- **Gemini** (Google) — Multimodal, long context
+- **Llama 3** (Meta) — Open-source, efficient
+- **Mistral** — Sparse experts, efficient
+- **DeepSeek** — Cost-effective reasoning
+- **Phi-3** (Microsoft) — Lightweight, edge
+
+### RAG & Retrieval
+- **LangChain** — Orchestration, chains, memory
+- **LlamaIndex** — Document indexing, retrieval
+- **Haystack** — Production pipelines
+- **RAGFlow** — Open-source orchestration
+- **GraphRAG** — Knowledge graph + retrieval
+
+### Vector Databases (Embeddings)
+- **Pinecone** — Managed, serverless
+- **Weaviate** — Open-source, GraphQL
+- **Qdrant** — High-performance
+- **Milvus** — Scalable
+- **Chroma** — Lightweight
+- **Redis** — Vector + caching
+- **Elasticsearch** — Full-text + vector
+
+### Data Ingestion
+- **Unstructured** — Parse PDFs, images, docs
+- **FireCrawl** — Website to LLM-ready data
+- **Docling** — Document understanding
+- **Beautiful Soup** — HTML/XML parsing
+
+### AI Security & Guardrails
+- **NVIDIA NeMo Guardrails** — Conversation safety
+- **Guardrails AI** — Input/output validation
+- **Microsoft Presidio** — PII detection
+- **Lakera** — Prompt injection detection
+- **ProtectAI** — ML security
+
+### Observability & Monitoring
+- **LangSmith** — Debug & test LLM apps
+- **Langfuse** — Open-source analytics
+- **TruLens** — RAG evaluation
+- **Ragas** — RAG assessment
+- **Promptfoo** — Eval harness
+- **Weights & Biases** — Experiment tracking
+- **OpenTelemetry** — Standard observability
+
+### Memory & State
+- **Mem0** — Persistent agent memory
+- **Zep** — Long-term memory layer
+- **Redis** — Distributed state
+- **PostgreSQL** — Relational storage
+
+### AI Agents & Orchestration
+- **LangGraph** — Agent state machines
+- **PydanticAI** — Type-safe agents
+- **Semantic Kernel** — Multi-model reasoning
+- **AWS Bedrock Agents** — Managed agents
+- **Azure AI Foundry** — Enterprise agents
+
+### Deployment & Infrastructure
+- **AWS** — SageMaker, Bedrock, Lambda
+- **Google Cloud** — Vertex AI, Cloud Run
+- **Azure** — Azure AI, Machine Learning
+- **Vercel** — Edge inference
+- **Docker** — Containerization
+- **Kubernetes** — Orchestration at scale
+
+### Evaluation & Testing
+- **Ragas** — RAG evaluation
+- **DeepEval** — LLM testing
+- **Giskard** — Model testing
+- **UpTrain** — Quality assurance
+
+### Prompt Engineering
+- **PromptHub** — Prompt marketplace
+- **PromptPerfect** — Optimization
+- **HumanLoop** — RLHF platform
+- **TextGrad** — Gradient-based tuning
+
+---
+
+## 🎯 AI Engineer's Stack (8 Core Areas)
+
+### 1. LLMs (Foundation)
+- Claude, GPT-4o, Gemini, Llama, Mistral
+- **Cost**: varies; Claude token-based
+- **Use**: Core reasoning for all agents
+
+### 2. Frameworks (Orchestration)
+- LangChain, LlamaIndex, Semantic Kernel, LangGraph
+- **Purpose**: Chain LLM calls, manage memory, routing
+- **Critical for**: Hemraj 13 agents, LeadVault pipelines
+
+### 3. Vector Databases (Knowledge)
+- Pinecone, Weaviate, Qdrant, Milvus
+- **Purpose**: Store embeddings, fast retrieval
+- **Critical for**: RAG in all projects
+
+### 4. Data Ingestion (Input)
+- FireCrawl, Unstructured, Docling
+- **Purpose**: Convert docs → LLM-ready format
+- **Critical for**: LeadVault data mining
+
+### 5. Observability & Monitoring (Visibility)
+- LangSmith, Langfuse, Ragas, TruLens
+- **Purpose**: Debug, evaluate, monitor pipelines
+- **Critical for**: Hemraj agent optimization
+
+### 6. Deployment & Infrastructure (Production)
+- AWS (Bedrock, SageMaker), GCP (Vertex, Cloud Run), Kubernetes
+- **Purpose**: Scale agents globally
+- **Critical for**: RxGPT HIPAA compliance
+
+### 7. Evaluation & Testing (Quality)
+- Ragas, DeepEval, Promptfoo, Giskard
+- **Purpose**: Test inputs → verify outputs
+- **Critical for**: Agent safety, reliability
+
+### 8. Prompt Engineering (Fine-Tuning)
+- Prompt optimization, in-context learning, few-shot patterns
+- **Purpose**: Maximize LLM performance
+- **Critical for**: All agent instruction design
+
+---
+
 ## 📊 Integration Matrix
 
 | Tool | Hemraj | LeadVault | DIGIX | RxGPT | fractional-cmo | Setup Time |
