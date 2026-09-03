@@ -298,44 +298,6 @@ scraping-ai --url https://example.com --extract "pricing, features"
 
 ---
 
-## 🔗 LLM Framework & Plugin System
-
-### 16. **DeepSeek Harness** ⭐ CRITICAL FOR AGENTS
-**"Everything is a Plugin"** — Universal LLM framework for making any system pluggable
-
-- **What**: Plugin architecture for integrating LLMs into any codebase
-- **Use**: Hemraj agents, DIGIX SDR, LeadVault classifiers
-- **Key Feature**: Instant LLM capability for existing systems (no rewrite)
-- **Deploy**: Python SDK or containerized
-- **GitHub**: [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
-- **Stats**: 201K stars, 23.1K forks
-
-```bash
-# Install
-pip install deepseek-harness
-
-# Make ANY function LLM-capable
-from deepseek_harness import plugin
-
-@plugin
-def my_function(x: int) -> str:
-    return f"Process {x}"
-
-# Now has LLM reasoning, multi-step execution, memory
-```
-
-**Why you need it**: 
-- Hemraj agents: Add LLM to existing pricing/forecasting logic
-- LeadVault: Plug LLM into classifier pipeline
-- DIGIX: Add reasoning to SDR score engine
-- RxGPT: Integrate LLM into clinical workflows
-
-**Integration with Semantica**: 
-- Harness plugins → Semantica decision graphs
-- Full traceability of LLM reasoning in your code
-
----
-
 ## 🖼️ Design & Workspace Tools
 
 ### 13. **Penpot** ⭐ FOR DIGIX DESIGN
