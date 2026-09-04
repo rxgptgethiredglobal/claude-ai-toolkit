@@ -485,6 +485,145 @@ Client Discovery, Engagement Automation
 
 ---
 
+## 🏗️ Design Patterns (15 Essential)
+
+| Pattern | Use Case | Your Projects |
+|---------|----------|---------------|
+| **Singleton** | One shared instance (logger, config) | Hemraj config, RxGPT settings |
+| **Factory Method** | Create objects by subclass decision | Agent creation (Hemraj 13 agents) |
+| **Builder** | Complex object construction step-by-step | Query builders (LeadVault SQL) |
+| **Prototype** | Clone, don't reconstruct | Agent templates (Hemraj) |
+| **Adapter** | Make two interfaces compatible | Legacy API wrappers |
+| **Decorator** | Add behavior without subclassing | Logging, caching layers |
+| **Facade** | Simplify complex subsystems | Payment gateway wrapper (DIGIX) |
+| **Proxy** | Stand-in for real object | API throttling, caching |
+| **Composite** | Treat tree as single object | Multi-agent orchestration |
+| **Observer** | Notify many objects of state change | Event systems, webhooks |
+| **Strategy** | Swap algorithm at runtime | Pricing strategies (Hemraj) |
+| **Command** | Encapsulate request as object | Task queuing (all projects) |
+| **State** | Alter behavior when state changes | Workflow state machines |
+| **Chain of Responsibility** | Pass request along chain | Approval workflows (Hemraj) |
+| **Template Method** | Base class defines skeleton | Agent loop template (all) |
+
+---
+
+## 🔀 Framework Comparison Matrix
+
+### **LangChain vs AutoGen vs Haystack**
+
+**LangChain** (Orchestration-first)
+- Model selection, tool wiring, memory setup, routing
+- Best for: Custom chains, flexible workflows
+- Use in: LeadVault pipelines, DIGIX reasoning
+
+**AutoGen** (Agent-first)
+- Agent selection, role design, tool binding, conversation loops
+- Best for: Multi-agent conversations, debates, human-in-loop
+- Use in: Hemraj agent orchestration
+
+**Haystack** (Data pipeline-first)
+- Data ingestion, document indexing, retrieval choice, RAG pipelines
+- Best for: Document-heavy workflows, production pipelines
+- Use in: LeadVault knowledge base, RxGPT medical docs
+
+---
+
+## 📊 DevOps vs MLOps vs LLMOps
+
+**DevOps** (Software-centric)
+- Focus: Code, CI/CD, testing, deployment, monitoring
+
+**MLOps** (Model-centric)
+- Focus: Data collection, training, evaluation, model registry, monitoring
+
+**LLMOps** (GenAI & Foundation Model-centric)
+- Focus: Prompt engineering, context/RAG setup, fine-tuning, evals, versioning, monitoring
+
+**Your Implementation**: LLMOps for Hemraj agents (prompt optimization) + MLOps for RxGPT (model training) + DevOps for all deployments
+
+---
+
+## 🛡️ 6 Layers of AI Governance
+
+1. **AI Inventory** — Shadow AI detection, system classification, risk tiering, ownership, model registry
+2. **Data Foundation** — Source tracking, lineage mapping, quality validation, freshness, bias screening
+3. **Data Security & Access** — Encryption, anonymization, role-based access, least privilege, key management
+4. **Model Assurance** — Model cards, performance benchmarks, fairness testing, red-teaming, drift detection
+5. **Human Oversight** — Decision review, escalation paths, override authority, output validation, accountability mapping
+6. **Compliance & Audit** — GDPR/AI Act mapping, incident enforcement, policy audit, reporting & trails
+
+**For Hemraj**: Layer 1-3 (data/access control), Layer 5 (pricing decisions need review), Layer 6 (audit for compliance)
+**For RxGPT**: All layers (HIPAA = strict governance requirement)
+
+---
+
+## 🌐 Backend Architecture Patterns
+
+**Load Balancer** (spreads load)
+- Distributes requests across identical servers
+- Health checks, failover, sticky sessions
+- Use: Hemraj multi-agent cluster
+
+**Reverse Proxy** (the front door)
+- TLS termination, caching, compression, URL rewriting
+- Same servers, hides backend complexity
+- Use: DIGIX API gateway, RxGPT frontend
+
+**API Gateway** (the smart gate)
+- Authentication, rate limiting, aggregation, request routing
+- Routes to different services (Users, Orders, Cart)
+- Use: LeadVault multi-service architecture, Hemraj agent router
+
+---
+
+## 🧠 Top 1% AI Engineer Mindset (10 Things)
+
+1. **Orchestrate, don't just prompt** — Build systems that think, plan, and act
+2. **Build continuous agents** — Let AI work while you sleep (agentic loops)
+3. **Focus on harnesses, not models** — Context, tools, memory, evals > model choice
+4. **Maximize value per token** — It's not about usage; it's about impact
+5. **Own the interface** — Models become commodities; interfaces build long-term value
+6. **Orchestrate across everything** — Models, APIs, databases, agents, and humans
+7. **Automate the repetitive** — Build systems that run without you
+8. **Find the bottleneck** — Today it's power; tomorrow it's orchestration
+9. **Build for outcomes, not benchmarks** — Users care about results, not test scores
+10. **Stay curious, always** — Better questions lead to better solutions
+
+---
+
+## 📈 Evolution of AI (LLM → Agentic AI)
+
+1. **LLM** (The Brain) — Passive text model responding to prompts
+2. **RAG** (Knowledge Base) — Connects AI to documents, data, trusted sources
+3. **Tool Calling** (The Hands) — Lets AI use software, APIs, calculators, browsers
+4. **Memory** (The History) — AI remembers context, preferences, past interactions
+5. **AI Agent** (Individual Worker) — Plans, completes complex tasks with tools & knowledge
+6. **Agentic AI** (Workplace System) — Monitors, reacts, coordinates workflows proactively
+7. **Skills/Hooks** (Upgrade Kit) — Adds specialized abilities, connects to real workflows
+8. **Governance** (The Manager) — Controls permissions, budgets, risks, approvals, safety
+
+**Key**: AI doesn't just answer questions—it runs businesses.
+
+---
+
+## 🔒 AI Security & Guardrails (8 Areas)
+
+| Attack Vector | Description | Defense | Impact |
+|---------------|-------------|---------|--------|
+| **Prompt Injection** | Malicious input overwrites instructions | Input validation, sandboxing | Data breach |
+| **Indirect Prompt Injection** | Hidden instructions in retrieved data (PDFs, web) | Sanitize retrieval results | Jailbreak |
+| **Jailbreaking** | Bypassing safety guidelines via clever prompts | Instruction guardrails, model fine-tuning | Harmful output |
+| **Data Leakage** | Model reveals training data or secrets | PII detection, redaction, rate limits | Compliance violation |
+| **Excessive Agency** | Agent takes unintended actions without approval | Approval gates, action whitelisting | Unauthorized operations |
+| **Least Privilege** | Give agents/users minimum required permissions | Role-based access, segregation | Lateral movement prevention |
+| **Validation & Sandboxing** | Test outputs before production | Output screening, test environment | Broken deployments |
+| **Human Approval & Auditing** | Humans review critical decisions | Logging, decision traces, approval workflows | Accountability |
+
+**For Hemraj**: Implement guardrails #2 (data retrieval), #4 (PII in market data), #5 (pricing approval)
+**For RxGPT**: All 8 (HIPAA requires comprehensive security + audit trails)
+
+---
+
 ## 📖 How to Use Skills
 
 ### In Claude Code Terminal

@@ -1,6 +1,6 @@
 # External Tools Directory 🛠️
 
-**20 curated open-source projects** for integrating with Claude, your agents, and projects.
+**22+ curated open-source projects** for integrating with Claude, your agents, and projects.
 
 ---
 
@@ -282,6 +282,45 @@ scraping-ai --url https://example.com --extract "pricing, features"
 - **Categories**: Hosting, DBs, APIs, monitoring, design, analytics
 - **GitHub**: [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev)
 - **132K stars**
+
+---
+
+### 22. **GitReverse** ⭐ REVERSE ENGINEER CODEBASES
+**Reverse engineer repositories to discover original prompts & AI workflows**
+
+- **What**: Analyzes commit history, file structure, patterns to extract AI-generated code signals
+- **Purpose**: Understand how AI was used to build projects; extract prompts from results
+- **Use Cases**:
+  - Competitive intelligence: How were other AI projects built?
+  - Portfolio analysis: Show how AI assisted in your project
+  - Prompt extraction: Learn what prompts likely generated this code
+  - Educational: Study real-world AI coding workflows
+- **Features**:
+  - Commit pattern analysis
+  - File structure inference
+  - Code style detection
+  - Likely framework & patterns
+  - Probable prompts reconstruction
+- **GitHub**: [yourusername/gitreverse](https://github.com) (1.9K stars)
+
+```bash
+# Install
+pip install gitreverse
+
+# Analyze a repository
+gitreverse analyze https://github.com/owner/repo
+
+# Extract probable prompts
+gitreverse extract-prompts https://github.com/owner/repo
+
+# Output: Likely prompts, patterns, AI signals, workflow stages
+```
+
+**For Your Projects**:
+- Hemraj: Show how 13 agents were architected with AI assistance
+- LeadVault: Document AI-driven mining pipeline workflow
+- DIGIX: Display how SDR logic was generated
+- RxGPT: Trace HIPAA-compliant architecture decisions
 
 ---
 
