@@ -624,6 +624,187 @@ Client Discovery, Engagement Automation
 
 ---
 
+## 30 Essential AI Interview Concepts
+
+### **Foundations (1-10)**
+
+| # | Concept | Definition | Use Case |
+|----|---------|-----------|----------|
+| 1 | **Transformer** | Architecture with self-attention layers | All LLMs (Claude, GPT-4, Llama) |
+| 2 | **Self-Attention** | Each token attends to all other tokens | Parallel processing, context understanding |
+| 3 | **Tokenization** | Split text into tokens (~4 chars/token) | Input to LLM, token counting |
+| 4 | **Embeddings** | Convert text/images to vectors (768-4K dims) | Retrieval, similarity search, RAG |
+| 5 | **Context Window** | Max tokens the model sees (100K-200K) | Prompt design, long documents |
+| 6 | **KV Cache** | Caches attention keys/values for speed | Inference optimization, streaming |
+| 7 | **Temperature & top-p** | Sampling parameters (0-1) | Creativity vs consistency trade-off |
+| 8 | **Hallucination** | AI generates false/made-up information | Why RAG + grounding needed |
+| 9 | **Zero-shot/Few-shot** | Prompting without/with examples | Prompt engineering techniques |
+| 10 | **Chain-of-Thought** | Step-by-step reasoning in prompts | Complex problem solving |
+
+### **Retrieval & Knowledge (11-20)**
+
+| # | Concept | Definition | Use Case |
+|----|---------|-----------|----------|
+| 11 | **RAG** | Retrieval-Augmented Generation | Ground AI in real data |
+| 12 | **Chunking Strategy** | Split docs into chunks (256-1K tokens) | Vector DB optimization |
+| 13 | **Vector Database** | Store/search embeddings (Pinecone, Weaviate) | Fast semantic search |
+| 14 | **Cosine Similarity/ANN** | Find nearest vectors | Retrieval ranking |
+| 15 | **Hybrid Search** | Vector + keyword search combined | Better relevance (LeadVault pattern) |
+| 16 | **Reranking** | Re-score retrieved results (LLM-based) | Improve top-1 accuracy |
+| 17 | **Agentic RAG** | Agent decides when/what to retrieve | Dynamic knowledge access |
+| 18 | **AI Agent** | Autonomous system with tools & planning | Hemraj 13 agents |
+| 19 | **ReAct Pattern** | Reasoning + Acting loop | Agent decision-making |
+| 20 | **Function/Tool Calling** | LLM calls external APIs/functions | Agent capability extension |
+
+### **Advanced Patterns (21-30)**
+
+| # | Concept | Definition | Use Case |
+|----|---------|-----------|----------|
+| 21 | **Agent Memory** | Long-term context for agents (episodic/semantic) | Multi-turn agent conversations |
+| 22 | **Multi-Agent Orchestration** | Coordinate multiple agents (manager pattern) | Hemraj: pricing + forecasting + procurement |
+| 23 | **MCP** | Model Context Protocol (standard tool layer) | Tool discovery, versioning, safety |
+| 24 | **Fine-tuning vs RAG vs Prompting** | Trade-offs for adaptation | Choose right approach per task |
+| 25 | **LoRA** | Low-Rank Adaptation (lightweight tuning) | 100x cheaper fine-tuning |
+| 26 | **QLoRA** | Quantized LoRA (4-bit precision) | Mobile/edge fine-tuning |
+| 27 | **RLHF & DPO** | Reinforcement Learning from Human Feedback | Model alignment to preferences |
+| 28 | **RAGAS Metrics** | Retrieval evaluation (context precision, recall) | RAG quality measurement |
+| 29 | **LLM-as-Judge** | Use LLM to evaluate outputs | Evals without labeled data |
+| 30 | **Prompt Injection & Guardrails** | Attack vector + defense (output validation) | Production AI safety |
+
+---
+
+## 14 Career Paths in AI (Skill Stacks)
+
+| Role | Core Skills | Secondary Skills | For Your Projects |
+|------|-------------|------------------|------------------|
+| **1. Prompt Engineer** | Prompt design, few-shot learning, system design | LLM APIs, debugging | LeadVault mining prompts |
+| **2. RAG Specialist** | Embeddings, chunking, retrieval, Vector DBs | MLOps, observability | LeadVault knowledge base |
+| **3. Agent Architect** | Tool design, orchestration, state management | LLM reasoning patterns | Hemraj 13-agent system |
+| **4. ML Engineer** | Model training, fine-tuning, evaluation | MLOps, inference, quantization | RxGPT model optimization |
+| **5. AI Researcher** | Paper reading, benchmarks, novel architectures | Math, statistics | DIGIX reasoning model |
+| **6. DevOps/MLOps** | CI/CD, containerization, monitoring, K8s | AWS/GCP, observability | Hemraj GCP deployment |
+| **7. AI Safety Engineer** | Guardrails, testing, red-teaming, evals | Security, compliance | RxGPT HIPAA compliance |
+| **8. Data Engineer** | Pipelines, ETL, data quality, warehousing | SQL, streaming | LeadVault data pipelines |
+| **9. LLM Application Developer** | Framework integration, API design, UX | Full-stack web, mobile | DIGIX SDR console |
+| **10. AI Product Manager** | User research, metrics, roadmap, compliance | Stakeholder management | All project leadership |
+| **11. AI Ethics & Governance** | Policy, audit, compliance, bias detection | Legal, regulations | Hemraj finance compliance |
+| **12. Vector DB Specialist** | Indexing, scaling, search optimization | Distributed systems | LeadVault search layer |
+| **13. Inference Optimizer** | Quantization, pruning, latency reduction | Hardware, TVM, CUDA | RxGPT latency optimization |
+| **14. Agentic AI Architect** | Multi-agent systems, orchestration, memory | Complex reasoning, planning | Hemraj director agent |
+
+---
+
+## LangChain vs LangGraph (Architecture Comparison)
+
+### **LangChain** (Orchestration Library)
+**Focus**: Sequential chains, memory, routing
+
+| Aspect | LangChain |
+|--------|-----------|
+| **Unit** | Chains (sequential steps) |
+| **State** | Global context (not strictly managed) |
+| **Tool Use** | Built-in tool calling, routing |
+| **Memory** | ConversationMemory, EntityMemory, etc. |
+| **Loop** | Manual (call chain repeatedly) |
+| **Use Case** | RAG pipelines, chatbots, simple agents |
+| **Your Use** | LeadVault RAG, DIGIX chatbot flows |
+
+### **LangGraph** (State Machine Framework)
+**Focus**: Explicit state graphs, controllable loops, cycles
+
+| Aspect | LangGraph |
+|--------|-----------|
+| **Unit** | Nodes (individual steps) + Edges (transitions) |
+| **State** | Strictly defined graph state (TypedDict) |
+| **Tool Use** | Explicit tool nodes in graph |
+| **Memory** | State persists across node transitions |
+| **Loop** | Built-in graph execution engine |
+| **Use Case** | Complex agents, multi-step workflows with cycles |
+| **Your Use** | Hemraj agent orchestration, agentic loops |
+
+### **Decision Matrix**
+- **Use LangChain if**: Simple RAG, chatbots, tool calling only
+- **Use LangGraph if**: Multi-agent systems, complex decision trees, explicit workflow control
+- **Hemraj**: LangGraph (13 agents, complex decision logic)
+- **LeadVault**: LangChain (linear RAG pipeline)
+
+---
+
+## MCP vs RAG vs Skills (Three Approaches to Extension)
+
+| Aspect | MCP | RAG | Skills |
+|--------|-----|-----|--------|
+| **What it is** | Tool protocol standard | Knowledge retrieval system | Anthropic pre-built integrations |
+| **Purpose** | Standardize tool interface | Ground AI in documents/data | Quick API integrations |
+| **Implementation** | Define tool schema (JSON) | Embed docs → vector search | Use pre-built skill commands |
+| **Discovery** | MCP registry (90+ servers) | Manual vector DB setup | Anthropic marketplace |
+| **Control** | Full custom logic | Control chunking/retrieval | Limited to provided skills |
+| **Examples** | Slack MCP, GitHub MCP, Notion MCP | LeadVault KB search | Gmail skill, GitHub skill |
+| **Your Use** | Multi-tool agent orchestration | Data grounding across projects | Quick integrations without coding |
+| **Learning Curve** | Medium (schema design) | High (chunking, retrieval tuning) | Low (pre-built) |
+
+**Your Stack**:
+- **Hemraj**: MCP for agent tools + RAG for market data
+- **LeadVault**: RAG for prospect database + Skills for Gmail integration
+- **DIGIX**: MCP for multi-platform APIs + Skills for Gmail/Instagram
+- **RxGPT**: RAG for medical docs + MCP for hospital system integrations
+
+---
+
+## 8 Ways to Build AI Governance That Actually Works
+
+### **1. Shadow AI Detection**
+- Track all AI tools in use (known + unknown)
+- Regular audits of SaaS, ChatGPT, Claude uses
+- Purpose: Inventory before governance
+
+### **2. Risk Tiering**
+- Tier 1: No PII, low-risk (market analysis)
+- Tier 2: Some PII, medium-risk (lead scoring)
+- Tier 3: PHI/financial, high-risk (RxGPT, Hemraj pricing)
+- Purpose: Proportional controls
+
+### **3. Data Quality Baseline**
+- Document data lineage (where does it come from?)
+- Freshness SLAs (daily? weekly?)
+- Bias screening (representative data?)
+- Purpose: AI only as good as input data
+
+### **4. Model Transparency Cards**
+- Who built it? When? What data? What biases?
+- Performance benchmarks (accuracy, latency)
+- Known limitations & failure modes
+- Purpose: No surprises in production
+
+### **5. Human-in-the-Loop Design**
+- Who makes final decisions? (pricing, medical, hiring)
+- Approval workflows for high-impact actions
+- Override authority & escalation
+- Purpose: Accountability when AI is wrong
+
+### **6. Continuous Evals & Monitoring**
+- Test before deployment (rubrics, benchmarks)
+- Monitor after deployment (drift detection)
+- Regular red-teaming for security
+- Purpose: Catch degradation early
+
+### **7. Audit & Versioning**
+- Log all decisions (what did AI recommend?)
+- Version prompts, tools, models
+- Immutable decision logs
+- Purpose: Retroactive analysis if needed
+
+### **8. Compliance Mapping**
+- Which regulations apply? (GDPR, AI Act, HIPAA, SOX)
+- Where does governance gap exist?
+- Document mapping to policy
+- Purpose: Defensible AI practices
+
+**For Hemraj**: Implement tiers 1-2-5 (shadow detection, data quality, approvals on pricing)
+**For RxGPT**: All 8 layers (HIPAA requires comprehensive governance)
+
+---
+
 ## 📖 How to Use Skills
 
 ### In Claude Code Terminal
