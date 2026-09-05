@@ -214,11 +214,45 @@ Categories:
 ## 🔗 LLM Framework & Plugin System
 
 ### 16. **DeepSeek Harness** ⭐ CRITICAL FOR AGENTS
-**"Everything is a Plugin"** — Universal LLM framework
+**"Everything is a Plugin"** — Universal LLM framework with plugin architecture
 
-- **Use**: Add LLM to any codebase instantly
+- **What**: Plugin-based LLM harness — add reasoning, tools, memory, agents as plugins
+- **Purpose**: Universal framework to add AI capabilities to any codebase
+- **Architecture**: Core engine + pluggable components (chains, memory, tools, routers)
+- **Official**: [deepseek.com/harness](https://deepseek.com/harness)
 - **GitHub**: [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
-- **201K stars, 23.1K forks**
+- **Stats**: 201K stars, 23.1K forks
+
+```bash
+# Plugin-based approach
+from deepseek_harness import Harness, Agent, Tools, Memory
+
+harness = Harness()
+harness.add_plugin(Agent)           # Autonomous reasoning
+harness.add_plugin(Tools)            # Tool calling (APIs, functions)
+harness.add_plugin(Memory)           # Long-term context
+harness.add_plugin(Router)           # Multi-step workflows
+
+# Everything is composable
+agent = harness.create_agent(
+    name="PricingAgent",
+    tools=["calculate", "forecast", "optimize"],
+    memory="episodic",
+    reasoning="agentic_loop"
+)
+```
+
+**Why It Matters**:
+- Universal plugin system (not locked to one framework)
+- Easy to add reasoning, tools, memory
+- Works with any LLM (Claude, GPT-4, Llama, DeepSeek)
+- Production-grade (201K stars proves it)
+
+**For Your Projects**:
+- **Hemraj**: Plugin architecture for 13 agents (pricing, forecast, procurement all use same harness)
+- **LeadVault**: Mining brain as plugin system
+- **DIGIX**: SDR logic as plugins
+- **RxGPT**: Clinical reasoning plugins
 
 ---
 
